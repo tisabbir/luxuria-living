@@ -1,13 +1,40 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import useAuth from "../hooks/useAuth";
+import { ToastContainer, toast } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 
 const Register = () => {
-    const {user, setUser, createUser} = useAuth();
+    const { createUser} = useAuth();
+    const navigate = useNavigate();
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+    const notify = () => toast.error('Password must have at least 6 characters with at least one uppercase and one lowercase letter.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+
+        // successfulRegister
+    const successfulRegister = () => toast.success('Congratulations ! You have successfully registered.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
 
     const {
         register,
@@ -22,11 +49,18 @@ const Register = () => {
         const photo = data.photo;
         const password = data.password;
 
+        if(!passwordRegex.test(password)){
+            notify();
+            return;
+        }
+
         console.log(name, email, photo, password);
 
         createUser(email, password)
         .then(res => {
             console.log(res.user);
+            successfulRegister();
+            navigate('/');
         })
         .catch(err => {
             console.log(err)
@@ -86,6 +120,19 @@ const Register = () => {
 		<input type="submit" value={"Register"} className="w-full px-8 py-3 font-semibold rounded-md bg-[#5E503F] text-white" />
 	</form>
             </div>
+
+            {/* <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/> */}
         </div>
     );
 };

@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import useAuth from "../hooks/useAuth";
 
 
@@ -9,6 +10,7 @@ const Home = () => {
         <div>
             
             <h1>This is home {name}</h1>
+           
         </div>
     );
 };
