@@ -1,4 +1,5 @@
-import { ToastContainer } from "react-toastify";
+
+import Banner from "../components/Banner";
 import useAuth from "../hooks/useAuth";
 
 
@@ -10,6 +11,7 @@ const Home = () => {
         <div>
             
             <h1>This is home {name}</h1>
+            <Banner />
            
         </div>
     );

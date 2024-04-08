@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 
 const LogIn = () => {
-	const {logInUser, logInWithGoogle, logInWithGithub, } = useAuth();
+	const {logInUser, logInWithGoogle, logInWithGithub } = useAuth();
 
 	const successfulLogIn = () => toast.success('Congratulations ! You have successfully logged in.', {
         position: "top-right",

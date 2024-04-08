@@ -4,7 +4,7 @@ import useAuth from "../hooks/useAuth";
 
 const Nav = () => {
 
-  const {logOut} = useAuth()
+  const {logOut, user} = useAuth()
 
     const navBar = (<>
 
@@ -12,7 +12,7 @@ const Nav = () => {
 
 <li><NavLink className={'p-0'} to={'/update'}><button className="btn btn-ghost md:text-xl">Update Profile</button></NavLink></li>
 
-<li><NavLink className={'p-0'} to={'/user'}><button className="btn btn-ghost md:text-xl ">User Profile</button></NavLink></li>
+
        
     
     </>);
@@ -50,8 +50,22 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link to={'/login'} className="btn">Login</Link>
-    <button onClick={handleLogOut}  className="btn">Log Out</button>
+      {
+        user ? <div className="flex gap-3 items-center ">
+
+          <div className="relative">
+          <img src={user.photoURL} alt="" className="rounded-full w-10 h-10 peer" />
+          <div className="hidden peer-hover:flex hover:flex absolute">
+            <h1>{user.displayName}</h1>
+          </div>
+          </div>
+          <button onClick={handleLogOut}  className="btn">Log Out</button>
+
+        </div> :  <Link to={'/login'} className="btn">Login</Link>
+      }
+
+   
+    
   </div>
 </div>
     );
