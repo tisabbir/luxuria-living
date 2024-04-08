@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form"
+import useAuth from "../hooks/useAuth";
 
 
 
 
 
 const Register = () => {
-
+    const {user, setUser, createUser} = useAuth();
 
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
       } = useForm();
 
@@ -22,7 +22,17 @@ const Register = () => {
         const photo = data.photo;
         const password = data.password;
 
-        console.log(name, email, photo, password)
+        console.log(name, email, photo, password);
+
+        createUser(email, password)
+        .then(res => {
+            console.log(res.user);
+        })
+        .catch(err => {
+            console.log(err)
+        })
+
+
       }
 
     return (
