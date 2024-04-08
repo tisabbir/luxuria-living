@@ -5,15 +5,27 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Home from './pages/Home';
+import UpdateProfile from './pages/UpdateProfile';
+import UserProfile from './pages/UserProfile';
+import LogIn from './components/LogIn';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div className='text-7xl'>
-
-      <h1>Hello world!</h1>
-      <h1 className='amaranth'>Hello world!</h1>
-    </div>,
+    element: <Home />,
+  },
+  {
+    path: "/update",
+    element: <UpdateProfile />,
+  },
+  {
+    path: "/user",
+    element: <UserProfile />,
+  },
+  {
+    path: "/login",
+    element: <LogIn />,
   },
 ]);
 
