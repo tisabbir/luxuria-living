@@ -10,28 +10,36 @@ import UpdateProfile from './pages/UpdateProfile';
 import UserProfile from './pages/UserProfile';
 import LogIn from './components/LogIn';
 import Register from './components/Register';
+import { Root } from 'postcss';
+import MainLayout from './pages/MainLayout';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/update",
-    element: <UpdateProfile />,
-  },
-  {
-    path: "/user",
-    element: <UserProfile />,
-  },
-  {
-    path: "/login",
-    element: <LogIn />,
-  },
-  {
-    path: "/register",
-    element: <Register />,
-  },
+    path : "/",
+    element : <MainLayout />,
+    children : [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/update",
+        element: <UpdateProfile />,
+      },
+      {
+        path: "/user",
+        element: <UserProfile />,
+      },
+      {
+        path: "/login",
+        element: <LogIn />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -5,7 +5,7 @@ import Nav from "./Nav";
 const LogIn = () => {
     return (
         <div>
-            <Nav />
+            
             
             <div className="w-full mx-auto mt-12 max-w-md p-4 rounded-md shadow sm:p-8 bg-[#C6AC8E] text-white">
 	<h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
