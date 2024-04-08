@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Nav from "./Nav";
 
 
@@ -9,7 +10,7 @@ const LogIn = () => {
             <div className="w-full mx-auto mt-12 max-w-md p-4 rounded-md shadow sm:p-8 bg-[#C6AC8E] text-white">
 	<h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
 	<p className="text-sm text-center text-black">Dont have account?  
-		<a href="#" rel="noopener noreferrer" className="underline hover:underline">Sign up here</a>
+		<Link to={"/register"}  rel="noopener noreferrer" className="underline hover:underline ml-2">Sign up here</Link>
 	</p>
 	<div className="my-6 space-y-4">
 		<button aria-label="Login with Google" type="button" className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-400 focus:ring-violet-400">
@@ -36,6 +37,7 @@ const LogIn = () => {
 		<p className="px-3 text-black">OR</p>
 		<hr  className="w-full text-black" />
 	</div>
+
 	<form noValidate="" action="" className="space-y-8">
 		<div className="space-y-4">
 			<div className="space-y-2">
