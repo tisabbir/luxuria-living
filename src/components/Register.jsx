@@ -1,8 +1,30 @@
 import { Link } from "react-router-dom";
-import Nav from "./Nav";
+import { useForm } from "react-hook-form"
+
+
+
 
 
 const Register = () => {
+
+
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+      } = useForm();
+
+
+      const handleRegister = (data) => {
+        const name = data.name;
+        const email = data.email;
+        const photo = data.photo;
+        const password = data.password;
+
+        console.log(name, email, photo, password)
+      }
+
     return (
         <div>
            
@@ -14,26 +36,31 @@ const Register = () => {
 	</p>
 
 
-            <form noValidate="" action="" className="space-y-8">
+            <form onSubmit={handleSubmit(handleRegister)}  className="space-y-8">
 
 
 		<div className="space-y-4">
 			
             <div className="space-y-2">
 				<label htmlFor="name" className="block text-sm">Name</label>
-				<input type="text" name="name" id="name" placeholder="Leroy Jenkins" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900" />
+				<input  type="text" name="name" id="name" placeholder="Leroy Jenkins" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900" {...register("name", { required: true })} />
+                {errors.name && <span className="text-red-700">Name is required</span>}
+
 			</div>
 
             <div className="space-y-2">
 				<label htmlFor="photo" className="block text-sm">Photo URL</label>
-				<input type="text" name="photo" id="photo" placeholder="leory.com/photo/1.jpg" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900" />
+				<input type="text" name="photo" id="photo" placeholder="leory.com/photo/1.jpg" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900" {...register("photo", { required: true })} />
+                {errors.photo && <span className="text-red-700">Photo URL is required</span>}
+
 			</div>
 
 
 
             <div className="space-y-2">
 				<label htmlFor="email" className="block text-sm">Email address</label>
-				<input type="email" name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900" />
+				<input type="email" name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900" {...register("email", { required: true })}  />
+                {errors.email && <span className="text-red-700">Email is required</span>}
 			</div>
 
 
@@ -41,12 +68,12 @@ const Register = () => {
 			<div className="space-y-2">
 				<div className="flex justify-between">
 					<label htmlFor="password" className="text-sm">Password</label>
-					<a rel="noopener noreferrer" href="#" className="text-xs hover:underline text-black">Forgot password?</a>
 				</div>
-				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900 " />
+				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900 "  {...register("password", { required: true })} />
+                {errors.password && <span className="text-red-700">Password is required</span>}
 			</div>
 		</div>
-		<button type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-[#5E503F] text-white">Sign in</button>
+		<input type="submit" value={"Register"} className="w-full px-8 py-3 font-semibold rounded-md bg-[#5E503F] text-white" />
 	</form>
             </div>
         </div>
