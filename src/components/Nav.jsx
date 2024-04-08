@@ -1,18 +1,31 @@
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 
 const Nav = () => {
 
+  const {logOut} = useAuth()
+
     const navBar = (<>
 
-<li><NavLink to={'/'}  className={'p-0'} > <a className="btn btn-ghost md:text-xl" >Home</a></NavLink></li>
+<li><NavLink to={'/'}  className={'p-0'} > <p className="btn btn-ghost md:text-xl" >Home</p></NavLink></li>
 
 <li><NavLink className={'p-0'} to={'/update'}><button className="btn btn-ghost md:text-xl">Update Profile</button></NavLink></li>
 
 <li><NavLink className={'p-0'} to={'/user'}><button className="btn btn-ghost md:text-xl ">User Profile</button></NavLink></li>
        
     
-    </>)
+    </>);
+
+    const handleLogOut = () => {
+      logOut()
+      .then(() => {
+        console.log('Successfully logged out')
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }
 
     return (
         <div className="navbar bg-base-100">
@@ -38,6 +51,7 @@ const Nav = () => {
   </div>
   <div className="navbar-end">
     <Link to={'/login'} className="btn">Login</Link>
+    <button onClick={handleLogOut}  className="btn">Log Out</button>
   </div>
 </div>
     );
