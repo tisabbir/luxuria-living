@@ -12,9 +12,8 @@ const Home = () => {
     const banners = data.banner_images;
     console.log(banners);
     return (
-        <div>
+        <div className="mt-12 max-w-6xl mx-auto">
             
-            <h1>This is home {name}</h1>
             <Banner banners={banners} />
            
         </div>

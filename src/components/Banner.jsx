@@ -37,7 +37,7 @@ const Banner = ({banners}) => {
                 console.log(banner);
                 
               return  <SwiperSlide key={index} > 
-                    <img src={banner} alt="" />
+                    <img className=' w-full h-[500px]  bg-cover rounded-2xl' src={banner} alt="" />
                  </SwiperSlide>
             })
         }
