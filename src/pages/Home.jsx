@@ -29,14 +29,18 @@ const Home = () => {
         <div className="mt-12">
 
             <div>
-                <h1 className="text-5xl font-bold text-[#C8AC8E] text-center">Discover Our Featured Listings</h1>
+                <h1 className="text-5xl font-bold text-[#5E503F] text-center">Discover Our Featured Estates</h1>
                 <p className="text-center text-gray-900 mt-6 max-w-2xl mx-auto">Explore our curated selection of opulent properties, meticulously chosen for discerning clientele. From exclusive penthouses to breathtaking beachfront villas, your dream home awaits.</p>
 
             </div>
-            <div>
-        <img className="w-full mt-6 mx-auto h-96" src="https://i.ibb.co/c2Mdm2W/banner4.jpg" />
+            <div className="relative">
+                 <img className="w-full mt-6 mx-auto h-96" src="https://i.ibb.co/c2Mdm2W/banner4.jpg" />
 
+                
+                <div className="-mt-80">
                 <Estates />
+                </div>
+                
             </div>
 
         </div>
