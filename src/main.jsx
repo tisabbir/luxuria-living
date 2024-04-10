@@ -14,6 +14,7 @@ import MainLayout from './pages/MainLayout';
 import AuthProvider from './providers/AuthProvider';
 import Error from './components/Error';
 import EstateDetails from './pages/EstateDetails';
+import ProtectedRoute from './protectedRoute/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <EstateDetails />,
+        element: <ProtectedRoute><EstateDetails /></ProtectedRoute>,
         loader: ()=> fetch("/estates.json"),
       },
     ]

@@ -51,7 +51,7 @@ const AuthProvider = ({children}) => {
     }
 
 
-    // loading json datas
+    // loading json data
     const [estates, setEstates] = useState([]);
 
     useEffect(()=>{
