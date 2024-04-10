@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { CiLocationOn } from "react-icons/ci";
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
@@ -10,7 +10,10 @@ const EstateDetails = () => {
 
     const {id} = useParams();
    
-    const {estates} =  useAuth();
+    // const {estates} =  useAuth();
+
+    const data = useLoaderData();
+    const estates = data.luxury_estates;
     const estate = estates.find(estate => parseInt(estate.id)  === parseInt(id));
 
 
