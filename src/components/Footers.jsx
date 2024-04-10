@@ -2,9 +2,9 @@
 
 const Footers = () => {
   return (
-    <footer  className="bg-gray-900 text-white py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-x-8">
+    <footer  className="bg-gray-900 text-white py-12 max-w-6xl mx-auto">
+      <div className=" px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className=" grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-x-8 max-w-6xl mx-auto">
           {/* Contact Us */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>

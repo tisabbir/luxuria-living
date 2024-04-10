@@ -1,0 +1,88 @@
+{
+  "luxury_estates": [
+    {
+      "id": 1,
+      "estate_title": "Luxurious Penthouse with Stunning City Views",
+      "segment_name": "Penthouse",
+      "description": "Experience luxury living at its finest in this spacious penthouse offering breathtaking views of the city skyline. Featuring high-end finishes, modern amenities, and ample living space.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "New York City, USA",
+      "detailed_location": "432 Park Avenue, New York, NY 10022",
+      "facilities": ["Spacious living room", "Private rooftop terrace", "Infinity pool"],
+      "image": "https://i.ibb.co/vPtmbzx/imagereader-4.webp",
+      "view_property_button": "View Property"
+    },
+    {
+      "id": 2,
+      "estate_title": "Exquisite Beachfront Villa with Private Access",
+      "segment_name": "Beachfront",
+      "description": "Escape to paradise in this luxurious beachfront villa, offering direct access to pristine sandy beaches and panoramic ocean views. Perfect for those seeking the ultimate coastal retreat.",
+      "price": "$7,500,000",
+      "status": "sale",
+      "area": "6000 sq ft",
+      "location": "Maui, Hawaii, USA",
+      "detailed_location": "86 W Papaua Pl, Lahaina, HI 96761",
+      "facilities": ["Ocean-facing master suite", "Private beach access", "Outdoor dining area"],
+      "image": "https://i.ibb.co/4p4sPwk/banner1.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "id": 3,
+      "estate_title": "Exclusive Resort Retreat with Five-Star Amenities",
+      "segment_name": "Resorts",
+      "description": "Indulge in luxury at this exclusive resort retreat offering world-class amenities, lush tropical gardens, and personalized service. Experience relaxation and rejuvenation in paradise.",
+      "price": "$10,000,000",
+      "status": "sale",
+      "area": "8000 sq ft",
+      "location": "Bora Bora, French Polynesia",
+      "detailed_location": "Motu Toopua, Bora Bora, French Polynesia",
+      "facilities": ["Infinity-edge pool", "Spa and wellness center", "Fine dining restaurant"],
+      "image": "https://i.ibb.co/xq8QXx8/banner.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "id": 4,
+      "estate_title": "Private Island Oasis with Unrivaled Seclusion",
+      "segment_name": "Private islands",
+      "description": "Discover unparalleled privacy and tranquility on your very own private island retreat. Enjoy expansive ocean views, pristine beaches, and endless opportunities for relaxation and adventure.",
+      "price": "$2,00,000",
+      "status": "rent",
+      "area": "10000 sq ft",
+      "location": "Seychelles",
+      "detailed_location": "North Island, Seychelles",
+      "facilities": ["Luxury villa accommodations", "Private yacht dock", "Helipad"],
+      "image": "https://i.ibb.co/c2Mdm2W/banner4.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "id": 5,
+      "estate_title": "Magnificent Mansion with Timeless Elegance",
+      "segment_name": "Mansions",
+      "description": "Step into luxury with this magnificent mansion showcasing timeless architectural design, expansive grounds, and lavish amenities. An epitome of sophistication and refinement.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "12000 sq ft",
+      "location": "Los Angeles, California, USA",
+      "detailed_location": "1060 Brooklawn Dr, Los Angeles, CA 90077",
+      "facilities": ["Grand foyer with dual staircases", "Private theater room", "Tennis court"],
+      "image": "https://i.ibb.co/rHt1sMD/banner3.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "id": 6,
+      "estate_title": "Secluded Hilltop Villa with Panoramic Views",
+      "segment_name": "Villas",
+      "description": "Escape to tranquility in this secluded hilltop villa offering panoramic views of lush landscapes and distant horizons. Enjoy the ultimate retreat surrounded by nature's beauty.",
+      "price": "$12,500,000",
+      "status": "sale",
+      "area": "9000 sq ft",
+      "location": "Santorini, Greece",
+      "detailed_location": "Unnamed Road, Santorini, 847 00",
+      "facilities": ["Expansive outdoor terrace", "Infinity-edge pool", "Home theater"],
+      "image": "https://i.ibb.co/4p4sPwk/banner1.jpg",
+      "view_property_button": "View Property"
+    }
+  ]
+}
