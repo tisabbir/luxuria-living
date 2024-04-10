@@ -9,13 +9,13 @@ import { useEffect, useState } from "react";
 const EstateDetails = () => {
 
     const {id} = useParams();
+
    
     // const {estates} =  useAuth();
 
     const data = useLoaderData();
     const estates = data.luxury_estates;
     const estate = estates.find(estate => parseInt(estate.id)  === parseInt(id));
-
 
     
 

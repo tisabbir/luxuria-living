@@ -14,43 +14,6 @@ const AuthProvider = ({children}) => {
     const githubProvider = new GithubAuthProvider();
 
 
-    // setting the observer
-    useEffect(()=>{
-     const unsubscribe =   onAuthStateChanged(auth, (currentUser) => {
-            if (currentUser) {
-                console.log('from onAuthStateChanged',currentUser)
-              setUser(currentUser);
-            } else {
-              setUser(null);
-            }
-          });
-
-          return ()=>{
-            unsubscribe();
-          }
-    },[])
-    // setting the observer
-
-    const createUser = (email, password) => {
-      return  createUserWithEmailAndPassword(auth, email, password)
-    };
-
-    const logInUser = (email, password) => {
-        return signInWithEmailAndPassword(auth, email, password)
-    }
-
-    const logInWithGoogle = () => {
-        return signInWithPopup(auth,googleProvider)
-    }
-    const logInWithGithub = () => {
-        return signInWithPopup(auth,githubProvider);
-    }
-
-    const logOut = () => {
-        return signOut(auth)
-    }
-
-
     // loading json data
     const [estates, setEstates] = useState([]);
 
@@ -62,6 +25,53 @@ const AuthProvider = ({children}) => {
             console.log(err)
         })
     },[])
+   
+
+    const createUser = (email, password) => {
+        setLoading(true);
+      return  createUserWithEmailAndPassword(auth, email, password)
+    };
+
+    const logInUser = (email, password) => {
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    const logInWithGoogle = () => {
+        setLoading(true);
+
+        return signInWithPopup(auth,googleProvider)
+    }
+    const logInWithGithub = () => {
+        setLoading(true);
+
+        return signInWithPopup(auth,githubProvider);
+    }
+
+    const logOut = () => {
+        setLoading(true)
+        return signOut(auth)
+    }
+
+
+    
+
+
+     // setting the observer
+     useEffect(()=>{
+        const unsubscribe =   onAuthStateChanged(auth, (currentUser) => {
+                
+            setUser(currentUser);
+            setLoading(false);
+            console.log('from onAuthStateChanged',currentUser)
+               
+             });
+   
+             return ()=>{
+               unsubscribe();
+             }
+       },[])
+       // setting the observer
 
 
 

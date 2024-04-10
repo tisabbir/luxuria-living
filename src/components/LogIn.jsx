@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { toast } from "react-toastify";
 
 
 const LogIn = () => {
 	const {logInUser, logInWithGoogle, logInWithGithub } = useAuth();
+
+	const location = useLocation();
+	console.log(location);
+	const navigate = useNavigate();
+
+	const from = location?.state || '/';
 
 	const successfulLogIn = () => toast.success('Congratulations ! You have successfully logged in.', {
         position: "top-right",
@@ -32,7 +38,8 @@ const LogIn = () => {
 			logInWithGoogle()
 			.then(res => {
 				console.log(res.user);
-				successfulLogIn()
+				successfulLogIn();
+				navigate(from);
 			})
 			.catch(err => {
 				console.error(err);
@@ -44,6 +51,8 @@ const LogIn = () => {
 			.then(res => {
 				console.log(res.user);
 				successfulLogIn()
+				navigate(from);
+
 			})
 			.catch(err => {
 				console.error(err);
@@ -60,6 +69,8 @@ const LogIn = () => {
 		.then(res => {
 			console.log(res.user)
 			successfulLogIn();
+			navigate(from);
+
 		})
 		.catch(err => {
 			console.log(err)
