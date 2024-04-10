@@ -12,20 +12,12 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { FreeMode, Pagination } from 'swiper/modules';
+import useAuth from "../hooks/useAuth";
 
 
 const Estates = () => {
 
-    const [estates, setEstates] = useState([]);
-
-    useEffect(()=>{
-        fetch('/estates.json')
-        .then(res => res.json())
-        .then(data => setEstates( data.luxury_estates))
-        .catch(err => {
-            console.log(err)
-        })
-    },[])
+   const {estates} = useAuth();
 
     console.log('Estates', estates);
 

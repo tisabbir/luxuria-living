@@ -1,4 +1,5 @@
 import { CiLocationOn } from "react-icons/ci";
+import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Estate = ({estate}) => {
@@ -6,6 +7,7 @@ const Estate = ({estate}) => {
     const {
 
         id,
+        rating,
         estate_title,
         segment_name,
         description,
@@ -33,7 +35,9 @@ const Estate = ({estate}) => {
            
            <h4 className="text-3xl" >{price}</h4>
 
-           <Link className="btn bg-[#5E503F] w-full text-white">{view_property_button}</Link>
+           <div className="flex gap-1 justify-center items-center">Ratings : <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalfStroke /> {rating} </div>
+
+           <Link to={`/details/${id}`} className="btn bg-[#5E503F] w-full text-white">{view_property_button}</Link>
 
            
            

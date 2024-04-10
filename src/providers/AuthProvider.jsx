@@ -51,6 +51,19 @@ const AuthProvider = ({children}) => {
     }
 
 
+    // loading json datas
+    const [estates, setEstates] = useState([]);
+
+    useEffect(()=>{
+        fetch('/estates.json')
+        .then(res => res.json())
+        .then(data => setEstates( data.luxury_estates))
+        .catch(err => {
+            console.log(err)
+        })
+    },[])
+
+
 
     const authInfo = {
         user,
@@ -62,6 +75,7 @@ const AuthProvider = ({children}) => {
         loading,
         setLoading,
         logOut,
+        estates
     }
     return (
         <AuthContext.Provider value={authInfo}>

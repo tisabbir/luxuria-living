@@ -2,6 +2,7 @@
   "luxury_estates": [
     {
       "id": 1,
+      "rating": 4.6,
       "estate_title": "Luxurious Penthouse with Stunning City Views",
       "segment_name": "Penthouse",
       "description": "Experience luxury living at its finest in this spacious penthouse offering breathtaking views of the city skyline. Featuring high-end finishes, modern amenities, and ample living space.",
@@ -16,6 +17,8 @@
     },
     {
       "id": 2,
+      "rating": 4.9,
+
       "estate_title": "Exquisite Beachfront Villa with Private Access",
       "segment_name": "Beachfront",
       "description": "Escape to paradise in this luxurious beachfront villa, offering direct access to pristine sandy beaches and panoramic ocean views. Perfect for those seeking the ultimate coastal retreat.",
@@ -30,6 +33,8 @@
     },
     {
       "id": 3,
+      "rating": 4.7,
+
       "estate_title": "Exclusive Resort Retreat with Five-Star Amenities",
       "segment_name": "Resorts",
       "description": "Indulge in luxury at this exclusive resort retreat offering world-class amenities, lush tropical gardens, and personalized service. Experience relaxation and rejuvenation in paradise.",
@@ -44,6 +49,8 @@
     },
     {
       "id": 4,
+      "rating": 4.8,
+
       "estate_title": "Private Island Oasis with Unrivaled Seclusion",
       "segment_name": "Private islands",
       "description": "Discover unparalleled privacy and tranquility on your very own private island retreat. Enjoy expansive ocean views, pristine beaches, and endless opportunities for relaxation and adventure.",
@@ -58,6 +65,8 @@
     },
     {
       "id": 5,
+      "rating": 4.4,
+
       "estate_title": "Magnificent Mansion with Timeless Elegance",
       "segment_name": "Mansions",
       "description": "Step into luxury with this magnificent mansion showcasing timeless architectural design, expansive grounds, and lavish amenities. An epitome of sophistication and refinement.",
@@ -72,6 +81,8 @@
     },
     {
       "id": 6,
+      "rating": 4.3,
+
       "estate_title": "Secluded Hilltop Villa with Panoramic Views",
       "segment_name": "Villas",
       "description": "Escape to tranquility in this secluded hilltop villa offering panoramic views of lush landscapes and distant horizons. Enjoy the ultimate retreat surrounded by nature's beauty.",

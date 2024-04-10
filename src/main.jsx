@@ -13,6 +13,7 @@ import Register from './components/Register';
 import MainLayout from './pages/MainLayout';
 import AuthProvider from './providers/AuthProvider';
 import Error from './components/Error';
+import EstateDetails from './pages/EstateDetails';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/details/:id",
+        element: <EstateDetails />,
       },
     ]
   }
