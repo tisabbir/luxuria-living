@@ -10,7 +10,7 @@ const ProtectedRoute = ({children}) => {
     
 
         if(loading){
-            return <div>loading....</div>
+            return <div className="flex justify-center items-center"><span className="loading loading-infinity loading-lg"></span></div>
         } 
         if(user){
            return children;

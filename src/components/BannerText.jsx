@@ -9,7 +9,7 @@ const BannerText = () => {
 
 <p className="text-sm font-sans mt-6 max-w-96">Your premier destination for exquisite properties, offering unparalleled elegance, opulence, and personalized service. Begin your journey today.</p>
 
-<button className="btn bg-[#C6AC8E] border-none text-white mt-6">Show Estates</button>
+<a href="#featured" className="btn bg-[#C6AC8E] border-none text-white mt-6">Show Estates</a>
         </div>
     );
 };

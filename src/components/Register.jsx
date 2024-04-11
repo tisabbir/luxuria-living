@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
-    const { createUser} = useAuth();
+    const { createUser, logOut} = useAuth();
     const navigate = useNavigate();
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
@@ -25,7 +25,7 @@ const Register = () => {
         });
 
         // successfulRegister
-    const successfulRegister = () => toast.success('Congratulations ! You have successfully registered.', {
+    const successfulRegister = () => toast.success('Congratulations ! You have successfully registered. Now log in to continue your journey with us.', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -60,7 +60,8 @@ const Register = () => {
         .then(res => {
             console.log(res.user);
             successfulRegister();
-            navigate('/');
+            logOut();
+            navigate('/login');
         })
         .catch(err => {
             console.log(err)
@@ -76,7 +77,7 @@ const Register = () => {
 
             <h2 className="mb-3 text-3xl font-semibold text-center">Register Account</h2>
 	<p className="text-sm text-center text-black">If you already have an account, Please   
-		<Link to={'/login'} rel="noopener noreferrer" className="underline hover:underline ml-2">Log In</Link>
+		<Link to={'/login'} rel="noopener noreferrer" className="underline hover:text-white text-xl ml-2">Log In</Link>
 	</p>
 
 
