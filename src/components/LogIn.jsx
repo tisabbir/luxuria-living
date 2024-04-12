@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 
 const LogIn = () => {
@@ -82,6 +83,9 @@ const LogIn = () => {
     return (
         <div>
             
+			<Helmet>
+				<title>Login || Luxuria Living</title>
+			</Helmet>
             
             <div className="w-full mx-auto mt-12 max-w-md p-4 rounded-md shadow sm:p-8 bg-[#C6AC8E] text-white">
 	<h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>

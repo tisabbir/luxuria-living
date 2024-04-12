@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import useAuth from "../hooks/useAuth";
 import BannerText from "../components/BannerText";
 import Estates from "../components/Estates";
+import { Helmet } from "react-helmet";
 
 
 
@@ -14,7 +15,12 @@ const Home = () => {
     const banners = data.banner_images;
     console.log(banners);
     return (
+        
+
         <div className="mt-12 scroll-smooth">
+            <Helmet >
+                <title>Home || Luxuria Living</title>
+            </Helmet>
             
             {/* banner containr */}
             <div className="relative max-w-6xl mx-auto">

@@ -4,6 +4,7 @@ import useAuth from "../hooks/useAuth";
 import {  toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 
 
@@ -72,6 +73,9 @@ const Register = () => {
 
     return (
         <div>
+            <Helmet>
+				<title>Register || Luxuria Living</title>
+			</Helmet>
            
             <div className="w-full mx-auto mt-12 max-w-md p-4 rounded-md shadow sm:p-8 bg-[#C6AC8E] text-white">
 

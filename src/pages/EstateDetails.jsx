@@ -5,6 +5,7 @@ import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const EstateDetails = () => {
 
@@ -42,8 +43,21 @@ const EstateDetails = () => {
     } =estate;
     
 
+    useEffect(() => {
+      if (estate_title) {
+        document.title = `${estate_title} - My Blog`;
+      }
+    }, [estate_title]);
+
     return (
         <div>
+
+<Helmet>
+        <title>{estate_title} || Luxuria Living</title>
+      </Helmet>
+
+
+
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row">
     <img src={image} className="max-w-2xl rounded-lg shadow-2xl" />
