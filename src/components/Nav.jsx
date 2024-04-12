@@ -11,10 +11,6 @@ const Nav = () => {
 <li><NavLink to={'/'}  className={'p-0'} > <p className="btn btn-ghost md:text-xl" >Home</p></NavLink></li>
 
 <li><NavLink className={'p-0'} to={'/update'}><button className="btn btn-ghost md:text-xl">Update Profile</button></NavLink></li>
-
-
-       
-    
     </>);
 
     const handleLogOut = () => {
@@ -36,6 +32,9 @@ const Nav = () => {
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       {navBar}
+       
+
+
       </ul>
     </div>
     <div className="">
@@ -52,6 +51,10 @@ const Nav = () => {
   <div className="navbar-end">
       {
         user ? <div className="flex gap-3 items-center ">
+
+       
+        <NavLink className={'p-0 hidden lg:flex menu menu-sm'} to={'/community'}><button className="btn btn-ghost md:text-xl">Community Discussion</button></NavLink>
+  
 
           <div className="relative">
           <img src={user.photoURL} alt="" className="rounded-full w-10 h-10 peer" />

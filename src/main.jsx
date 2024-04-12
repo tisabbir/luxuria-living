@@ -15,6 +15,7 @@ import AuthProvider from './providers/AuthProvider';
 import Error from './components/Error';
 import EstateDetails from './pages/EstateDetails';
 import ProtectedRoute from './protectedRoute/ProtectedRoute';
+import CommunityDiscussion from './pages/CommunityDiscussion';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/community",
+        element: <CommunityDiscussion />,
       },
       {
         path: "/details/:id",

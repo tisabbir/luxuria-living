@@ -1,0 +1,53 @@
+{
+    "community_posts": [
+      {
+        "post_time": "Apr 5, 2023",
+        "tag": "Luxury Lifestyle",
+        "title": "Indulge in Ultimate Luxury at Exclusive Resort Retreats",
+        "post": "Escape to secluded island hideaways and pamper yourself with world-class amenities. Experience luxury like never before.",
+        "avatar": "https://example.com/avatar1.jpg",
+        "name": "Sophia Roberts"
+      },
+      {
+        "post_time": "May 12, 2023",
+        "tag": "Interior Design",
+        "title": "Timeless Elegance: Classic Interior Design Inspirations",
+        "post": "Explore timeless interior design inspirations that exude elegance and sophistication. Elevate your living space with classic touches.",
+        "avatar": "https://example.com/avatar2.jpg",
+        "name": "Daniel Thompson"
+      },
+      {
+        "post_time": "Jun 20, 2023",
+        "tag": "Travel",
+        "title": "Luxury Escapes: Discover Hidden Gems Around the World",
+        "post": "Uncover hidden gems and experience luxury retreats off the beaten path. Dive into untouched paradises and create unforgettable memories.",
+        "avatar": "https://example.com/avatar3.jpg",
+        "name": "Olivia Johnson"
+      },
+      {
+        "post_time": "Jul 3, 2023",
+        "tag": "Architecture",
+        "title": "Architectural Wonders: Iconic Buildings That Define Luxury Living",
+        "post": "Marvel at architectural wonders that redefine luxury living. From skyscrapers to contemporary masterpieces, these buildings inspire awe.",
+        "avatar": "https://example.com/avatar4.jpg",
+        "name": "Michael Wilson"
+      },
+      {
+        "post_time": "Aug 15, 2023",
+        "tag": "Real Estate Investment",
+        "title": "Investing in Luxury Real Estate: Strategies for Success",
+        "post": "Unlock the secrets of investing in luxury real estate. Discover lucrative opportunities and strategies for maximizing returns.",
+        "avatar": "https://example.com/avatar5.jpg",
+        "name": "Emily Adams"
+      },
+      {
+        "post_time": "Sep 7, 2023",
+        "tag": "Home Decor",
+        "title": "Luxury Home Decor Tips: Creating a Lavish Living Space",
+        "post": "Transform your home into a lavish retreat with these luxury decor tips. From opulent furnishings to statement art pieces, elevate your space.",
+        "avatar": "https://example.com/avatar6.jpg",
+        "name": "William Anderson"
+      }
+    ]
+  }
+  
