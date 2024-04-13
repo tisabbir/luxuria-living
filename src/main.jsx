@@ -46,7 +46,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/community",
-        element: <CommunityDiscussion />,
+        element: <ProtectedRoute><CommunityDiscussion /></ProtectedRoute>,
+        loader : ()=> fetch('/community.json'),
       },
       {
         path: "/details/:id",
