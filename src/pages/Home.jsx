@@ -5,6 +5,8 @@ import useAuth from "../hooks/useAuth";
 import BannerText from "../components/BannerText";
 import Estates from "../components/Estates";
 import { Helmet } from "react-helmet";
+import FAQ from "../components/FAQ";
+import Reviews from "../components/Reviews";
 
 
 
@@ -51,6 +53,9 @@ const Home = () => {
 
         </div>
             {/* Estate container */}
+
+            <FAQ />
+            <Reviews />
            
         </div>
     );
