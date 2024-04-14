@@ -2,9 +2,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import useAuth from "../hooks/useAuth";
 import {  toast } from 'react-toastify';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet";
+import { useState } from "react";
 
 
 
@@ -13,6 +15,12 @@ const Register = () => {
     const { createUser, logOut} = useAuth();
     const navigate = useNavigate();
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+    const [showPassword, setShowPassword] = useState(false);
+
+    const handleShowPassword = () => {
+        setShowPassword(!showPassword);
+    }
 
     const notify = () => toast.error('Password must have at least 6 characters with at least one uppercase and one lowercase letter.', {
         position: "top-right",
@@ -114,12 +122,16 @@ const Register = () => {
 
 
             
-			<div className="space-y-2">
+			<div className="space-y-2 relative">
 				<div className="flex justify-between">
 					<label htmlFor="password" className="text-sm">Password</label>
 				</div>
-				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900 "  {...register("password", { required: true })} />
+				<input type={ showPassword ? "text" : "password"} name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900 "  {...register("password", { required: true })} />
                 {errors.password && <span className="text-red-700">Password is required</span>}
+                {
+                    showPassword ? <FaEye onClick={handleShowPassword} className="text-gray-600 absolute top-8 right-6" /> :
+                    <FaEyeSlash onClick={handleShowPassword} className="text-gray-600 absolute top-8 right-6" />
+                }
 			</div>
 		</div>
 		<input type="submit" value={"Register"} className="w-full px-8 py-3 font-semibold rounded-md bg-[#5E503F] text-white" />

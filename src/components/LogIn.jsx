@@ -2,6 +2,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const LogIn = () => {
@@ -11,7 +13,17 @@ const LogIn = () => {
 	console.log(location);
 	const navigate = useNavigate();
 
+	const [showPassword, setShowPassword] = useState(false);
+
+    const handleShowPassword = () => {
+        setShowPassword(!showPassword);
+    }
+
+
+
 	const from = location?.state || '/';
+
+
 
 	const successfulLogIn = () => toast.success('Congratulations ! You have successfully logged in.', {
         position: "top-right",
@@ -119,12 +131,16 @@ const LogIn = () => {
 				<label htmlFor="email" className="block text-sm">Email address</label>
 				<input type="email" name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900" />
 			</div>
-			<div className="space-y-2">
+			<div className="space-y-2 relative">
 				<div className="flex justify-between">
 					<label htmlFor="password" className="text-sm">Password</label>
 					<a rel="noopener noreferrer" href="#" className="text-xs hover:underline text-black">Forgot password?</a>
 				</div>
-				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900 " />
+				<input type={ showPassword ? "text" : "password"} name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md bg-gray-100 text-gray-900 " />
+				{
+                    showPassword ? <FaEye onClick={handleShowPassword} className="text-gray-600 absolute top-8 right-6" /> :
+                    <FaEyeSlash onClick={handleShowPassword} className="text-gray-600 absolute top-8 right-6" />
+                }
 			</div>
 		</div>
 		<input type="submit" value={'Log In'}  className="w-full px-8 py-3 font-semibold rounded-md bg-[#5E503F] text-white" />
