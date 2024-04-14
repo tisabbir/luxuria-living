@@ -4,7 +4,8 @@ Live Link :
 Repository Link : 
 
 <hr/>
-**Features:**
+
+**Features :**
 
 1. **Featured Listings:** Highlight handpicked luxury properties on the homepage for easy access to premier real estate offerings.
 
@@ -27,3 +28,10 @@ Repository Link :
 4. **Personalization:** Tailor the user experience by allowing users to manage their profiles and preferences.
 
 5. **Professionalism:** Demonstrate professionalism and expertise in assisting clients with their luxury real estate needs.
+
+<hr/>
+
+**Packages Used :** 
+1. Animate.css
+2. React-Hook Form
+3. Swiper Slider
