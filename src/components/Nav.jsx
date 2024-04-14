@@ -18,7 +18,7 @@ const Nav = () => {
     <li><NavLink className={'p-0 menu menu-sm'} to={'/community'}><button className="btn btn-ghost md:text-xl">Community</button></NavLink></li>
 
   </div> : 
-  <button> Loading...</button>
+  <button> </button>
 }
 
 

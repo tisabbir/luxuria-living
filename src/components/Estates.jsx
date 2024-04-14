@@ -28,7 +28,18 @@ const Estates = () => {
             
         <Swiper
         slidesPerView={3}
-        spaceBetween={30}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          655:{
+            slidesPerView:2,
+          },
+          950: {
+            slidesPerView: 3,
+          },
+        }}
+        spaceBetween={10}
         freeMode={true}
         pagination={{
           clickable: true,

@@ -27,7 +27,7 @@ const Home = () => {
             {/* banner containr */}
             <div className="relative max-w-6xl mx-auto">
             <Banner banners={banners} />
-                <div className="absolute top-1/3 left-20 z-10  ">
+                <div className="absolute top-10 md:top-20 lg:top-1/3 left-5 md:left-10 lg:left-20 z-10  ">
                         <BannerText />
                 </div>
             </div>
@@ -37,7 +37,7 @@ const Home = () => {
         <div className="mt-12">
 
             <div>
-                <h1 id="featured" className="text-5xl font-bold text-[#5E503F] text-center">Discover Our Featured Estates</h1>
+                <h1 id="featured" className="text-xl md:text-3xl lg:text-5xl font-bold text-[#5E503F] text-center">Discover Our Featured Estates</h1>
                 <p className="text-center text-gray-900 mt-6 max-w-2xl mx-auto">Explore our curated selection of opulent properties, meticulously chosen for discerning clientele. From exclusive penthouses to breathtaking beachfront villas, your dream home awaits.</p>
 
             </div>
