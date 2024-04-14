@@ -58,15 +58,15 @@ const EstateDetails = () => {
 
 
 
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero bg-base-200">
   <div className="hero-content flex-col lg:flex-row">
-    <img src={image} className="max-w-2xl rounded-lg shadow-2xl" />
+    <img src={image} className="max-w-screen md:max-w-2xl lg:max-w-2xl rounded-lg shadow-2xl" />
     <div className="space-y-3">
-      <h1 className="text-5xl font-bold">{estate_title}</h1>
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">{estate_title}</h1>
       
         <div className="flex items-center gap-2">
             <hr className="flex-1 border-2 border-black" />
-            <p className="text-center text-xl ">For {status}</p>
+            <p className="text-center text-base md:text-lg lg:text-xl ">For {status}</p>
             <hr className="flex-1 border-2 border-black" />
         </div>
 
