@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Post from "../components/Post";
+import { Helmet } from "react-helmet";
 
 
 const CommunityDiscussion = () => {
@@ -11,6 +12,9 @@ const CommunityDiscussion = () => {
 
     return (
         <div>
+			<Helmet>
+				<title>Community Discussion || Luxuria Living</title>
+			</Helmet>
 
 			<div className="mt-12 space-y-3">
 			<h1 className="text-5xl font-bold text-[#5E503F] text-center">Luxuria Living Discussions</h1>

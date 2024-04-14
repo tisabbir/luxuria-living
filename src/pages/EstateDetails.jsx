@@ -57,6 +57,10 @@ const EstateDetails = () => {
       </Helmet>
 
 
+<div className="bg-base-300 text-center rounded-lg mt-12 mb-12  py-3 md:py-6">
+  <h1 className="text-xl md:text-2xl lg:text-4xl">Estate Details : Everything you need to Know</h1>
+</div>
+
 
             <div className="hero bg-base-200">
   <div className="hero-content flex-col lg:flex-row">
@@ -88,7 +92,7 @@ const EstateDetails = () => {
       
        {detailed_location}</div>
 
-       <p className="max-w-2xl mx-auto"> <span className="text-xl font-bold">Facilities : </span>
+       <div className="max-w-2xl mx-auto"> <span className="text-xl font-bold">Facilities : </span>
        
        <ul className=" list-disc">
        {
@@ -96,7 +100,7 @@ const EstateDetails = () => {
        }
        </ul>
        
-        </p>
+        </div>
       
     </div>
   </div>
