@@ -45,7 +45,7 @@ const EstateDetails = () => {
 
     useEffect(() => {
       if (estate_title) {
-        document.title = `${estate_title} - My Blog`;
+        document.title = `${estate_title} || Luxuria Living`;
       }
     }, [estate_title]);
 

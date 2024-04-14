@@ -57,9 +57,9 @@ const Nav = () => {
   
 
           <div className="relative">
-          <img src={user.photoURL} alt="" className="rounded-full w-10 h-10 peer" />
+          <img src={user?.photoURL} alt="" className="rounded-full w-10 h-10 peer" />
           <div className="hidden peer-hover:flex hover:flex absolute">
-            <h1>{user.displayName}</h1>
+            <h1>{user?.displayName}</h1>
           </div>
           </div>
           <button onClick={handleLogOut}  className="btn">Log Out</button>

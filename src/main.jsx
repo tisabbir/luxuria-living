@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/update",
-        element: <UpdateProfile />,
+        element: <ProtectedRoute><UpdateProfile /></ProtectedRoute>,
       },
       {
         path: "/user",

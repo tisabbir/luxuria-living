@@ -37,7 +37,7 @@ const Estate = ({estate}) => {
 
            <div className="flex gap-1 justify-center items-center">Ratings : <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalfStroke /> {rating} </div>
 
-           <Link to={`/details/${id}`} className="btn bg-[#5E503F] w-full text-white">{view_property_button}</Link>
+           <Link to={`/details/${id}`} className="btn bg-[#5E503F] w-full text-white animate__animated animate__pulse animate__infinite	 ">{view_property_button}</Link>
 
            
            

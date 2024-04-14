@@ -1,4 +1,4 @@
-
+import "animate.css"
 
 const BannerText = () => {
     return (
@@ -9,7 +9,7 @@ const BannerText = () => {
 
 <p className="text-sm font-sans mt-6 max-w-96">Your premier destination for exquisite properties, offering unparalleled elegance, opulence, and personalized service. Begin your journey today.</p>
 
-<a href="#featured" className="btn bg-[#C6AC8E] border-none text-white mt-6">Show Estates</a>
+<a href="#featured" className="btn bg-[#5E503F] border-none text-white mt-6 animate__animated animate__pulse animate__infinite	">Show Estates</a>
         </div>
     );
 };
