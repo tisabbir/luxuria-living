@@ -10,7 +10,18 @@ const Nav = () => {
 
 <li><NavLink to={'/'}  className={'p-0'} > <p className="btn btn-ghost md:text-xl" >Home</p></NavLink></li>
 
-<li><NavLink className={'p-0'} to={'/update'}><button className="btn btn-ghost md:text-xl">Update Profile</button></NavLink></li>
+{
+  user ? <div className="flex flex-col lg:flex-row gap-3 items-center "> 
+    <li><NavLink className={'p-0'} to={'/update'}><button className="btn btn-ghost md:text-xl">Update Profile</button></NavLink></li>
+
+
+    <li><NavLink className={'p-0 menu menu-sm'} to={'/community'}><button className="btn btn-ghost md:text-xl">Community</button></NavLink></li>
+
+  </div> : 
+  <button> Loading...</button>
+}
+
+
     </>);
 
     const handleLogOut = () => {
@@ -24,13 +35,13 @@ const Nav = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 max-w-6xl mx-auto">
+        <div className="navbar bg-base-100 max-w-6xl mx-auto z-20">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
       {navBar}
        
 
@@ -53,7 +64,7 @@ const Nav = () => {
         user ? <div className="flex gap-3 items-center ">
 
        
-        <NavLink className={'p-0 hidden lg:flex menu menu-sm'} to={'/community'}><button className="btn btn-ghost md:text-xl">Community Discussion</button></NavLink>
+        
   
 
           <div className="relative">
@@ -62,6 +73,7 @@ const Nav = () => {
             <h1>{user?.displayName}</h1>
           </div>
           </div>
+
           <button onClick={handleLogOut}  className="btn">Log Out</button>
 
         </div> :  <Link to={'/login'} className="btn">Login</Link>
