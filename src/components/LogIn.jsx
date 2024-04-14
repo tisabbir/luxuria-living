@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import 'animate.css';
 
 
 const LogIn = () => {
@@ -143,7 +144,7 @@ const LogIn = () => {
                 }
 			</div>
 		</div>
-		<input type="submit" value={'Log In'}  className="w-full px-8 py-3 font-semibold rounded-md bg-[#5E503F] text-white" />
+		<input type="submit" value={'Log In'}  className="w-full px-8 py-3 font-semibold rounded-md bg-[#5E503F] text-white animate__animated animate__pulse animate__infinite	" />
 	</form>
 </div>
         </div>
