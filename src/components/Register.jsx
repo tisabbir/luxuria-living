@@ -8,12 +8,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import "animate.css"
+import { updateProfile } from "firebase/auth";
+import auth from "../firebase/firebase.config";
 
 
 
 
 const Register = () => {
-    const { createUser, logOut} = useAuth();
+    const { createUser, logOut, user, setUser} = useAuth();
     const navigate = useNavigate();
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
@@ -70,6 +72,24 @@ const Register = () => {
         .then(res => {
             console.log(res.user);
             successfulRegister();
+         
+            
+
+            setUser({
+                ...user,
+                displayName : name,
+                photoURL : photo,
+                email : email,
+            })
+
+            updateProfile(auth.currentUser, {
+                displayName: name, photoURL:photo ||"https://robohash.org/Alison.png?set=set4",
+              })
+
+            console.log('user from register b4 logout', user)
+
+
+
             logOut();
             navigate('/login');
         })

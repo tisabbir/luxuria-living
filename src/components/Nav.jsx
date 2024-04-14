@@ -5,7 +5,7 @@ import useAuth from "../hooks/useAuth";
 const Nav = () => {
 
   const {logOut, user} = useAuth()
-
+console.log('from navbar', user);
     const navBar = (<>
 
 <li><NavLink to={'/'}  className={'p-0'} > <p className="btn btn-ghost md:text-xl" >Home</p></NavLink></li>

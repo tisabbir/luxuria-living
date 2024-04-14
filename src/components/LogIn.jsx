@@ -8,7 +8,7 @@ import 'animate.css';
 
 
 const LogIn = () => {
-	const {logInUser, logInWithGoogle, logInWithGithub } = useAuth();
+	const {logInUser, logInWithGoogle, logInWithGithub, user, setUser } = useAuth();
 
 	const location = useLocation();
 	console.log(location);
@@ -84,6 +84,7 @@ const LogIn = () => {
 			console.log(res.user)
 			successfulLogIn();
 			navigate(from);
+			
 
 		})
 		.catch(err => {
