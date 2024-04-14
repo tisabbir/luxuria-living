@@ -1,7 +1,7 @@
 <h1>LUXURIA LIVING</h1>
 <hr />
-Live Link : 
-Repository Link : 
+Live Link : https://luxuria-living.web.app/
+Repository Link : https://github.com/programming-hero-web-course-4/b9a9-real-estate-tisabbir
 
 <hr/>
 

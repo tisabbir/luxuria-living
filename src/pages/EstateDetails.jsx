@@ -1,10 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
-import { CiLocationOn } from "react-icons/ci";
+
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
-import { Link } from "react-router-dom";
-import Nav from "../components/Nav";
-import { useEffect, useState } from "react";
+
+
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 const EstateDetails = () => {

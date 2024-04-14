@@ -50,7 +50,7 @@ console.log('from navbar', user);
     </div>
     <div className="">
     <Link to={'/'} className="btn btn-ghost text-lg md:text-2xl lg:text-3xl">
-        <img src="../../public/logo.svg" className="hidden md:flex w-10 h-10 rounded-xl"/>
+        <img src="logo.svg" className="hidden md:flex w-10 h-10 rounded-xl"/>
         Luxuria Living</Link>
     </div>
   </div>
