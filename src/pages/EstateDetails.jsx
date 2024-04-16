@@ -5,6 +5,7 @@ import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
 
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import ShortBanner from "../components/ShortBanner";
 
 const EstateDetails = () => {
 
@@ -57,7 +58,7 @@ const EstateDetails = () => {
 
 
 <div className="bg-base-300 text-center rounded-lg mt-12 mb-12  py-3 md:py-6">
-  <h1 className="text-xl md:text-2xl lg:text-4xl">Estate Details : Everything you need to Know</h1>
+  <ShortBanner />
 </div>
 
 

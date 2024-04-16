@@ -1,13 +1,14 @@
 
 
-const SmallBanner = () => {
+const ShortBanner = () => {
     return (
         <div>
-<div className="px-8 py-2 bg-white text-gray-900">
+            <div className="max-w-6xl mx-auto">
+<div className="px-8 py-2 text-gray-900">
 	<div className="flex items-center mx-auto container justify-center md:justify-between py-2">
 		<div>
-			<span className="text-luxury">Get up to 50% off your first order + free shipping,&nbsp;</span>
-			<a href="#" rel="noopener noreferrer" className="underline text-luxury">sign up</a>today!
+			<span className="text-luxury text-xl">Get up to 25% off your first order, download </span>
+			<a href="#" rel="noopener noreferrer" className="underline text-luxury mr-1">our mobile app</a> today!
 		</div>
 		<a href="#" rel="noopener noreferrer" className="items-center gap-2 hidden md:flex text-luxury">
 			<svg role="img" viewBox="0 0 22 22" className="fill-current h-4 w-4">
@@ -19,7 +20,8 @@ const SmallBanner = () => {
 </div>
 
         </div>
+        </div>
     );
 };
 
-export default SmallBanner;
+export default ShortBanner;
