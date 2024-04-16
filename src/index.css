@@ -5,6 +5,10 @@
   scroll-behavior: smooth;
 }
 
+.text-luxury {
+  color: #5E503F; /* Luxurious color */
+}
+
 
 @tailwind base;
 @tailwind components;
