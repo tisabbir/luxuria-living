@@ -7,6 +7,10 @@ Repository Link : https://github.com/programming-hero-web-course-4/b9a9-real-est
 
 <hr/>
 
+
+## Project Overview : 
+Luxuria Living is a premier web platform dedicated to showcasing and managing luxury real estate properties. It provides a seamless experience for users to explore exclusive properties, interact with the community, and manage their real estate needs efficiently.
+
 **Features :**
 
 1. **Featured Listings:** Highlight handpicked luxury properties on the homepage for easy access to premier real estate offerings.
@@ -33,7 +37,31 @@ Repository Link : https://github.com/programming-hero-web-course-4/b9a9-real-est
 
 <hr/>
 
+## Technology Used 
+1. React JS
+2. Node JS
+3. JavaScript
+4. Tailwind CSS
+5. HTML
+
 **Packages Used :** 
 1. Animate.css
 2. React-Hook Form
 3. Swiper Slider
+
+
+## Steps to run the project locally
+
+Prerequisites
+1. Install Node.js and npm
+2. Install MongoDB
+3. Install Git
+
+### Steps
+1. Clone the Repository
+2. Install Backend Dependencies
+3. Configure Backend Environment Variables
+4. Run Backend Server
+5. Install Frontend Dependencies
+6. Configure Frontend Environment Variables
+7. Run Frontend Server
